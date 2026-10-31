@@ -1,76 +1,137 @@
-FINDA.
-Shop
-About
-Contact
-The smart-find shop
-GOOD FINDS.
-BETTER FINDS.
-Useful products, pre-loved favorites and unexpected finds — picked with value in mind.
 
-Explore the shop ↗
-Our idea
-F.
-FIND YOUR NEXT FAVORITE
-Browse the finds
-Shop the collection.
-A rotating mix of useful things and great secondhand finds.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINDA | Great Finds. Better Prices.</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f8fa;color:#171923}
+header{background:#111827;color:white;padding:22px 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:30px;font-weight:900;letter-spacing:3px}
+nav a{color:white;text-decoration:none;margin-left:24px;font-size:14px}
+.hero{background:linear-gradient(120deg,#111827,#273b61);color:white;text-align:center;padding:85px 20px}
+.hero h1{font-size:48px;margin-bottom:15px}
+.hero p{font-size:18px;color:#d4dbea}
+.hero button{margin-top:28px;padding:14px 28px;border:0;border-radius:7px;background:#58d6a1;color:#10251c;font-weight:bold;font-size:15px;cursor:pointer}
+section{padding:55px 8%}
+.section-title{text-align:center;font-size:30px;margin-bottom:12px}
+.subtitle{text-align:center;color:#697386;margin-bottom:35px}
+.filters{text-align:center;margin-bottom:30px}
+.filters button{padding:10px 18px;margin:5px;border:1px solid #d5dae2;border-radius:20px;background:white;cursor:pointer}
+.filters button:hover{background:#111827;color:white}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:white;border-radius:12px;padding:22px;box-shadow:0 5px 20px #1522380d;text-align:center}
+.product-icon{font-size:65px;background:#f0f3f8;border-radius:10px;padding:25px;margin-bottom:18px}
+.card h3{margin-bottom:9px}
+.card p{color:#697386;font-size:14px;line-height:1.5}
+.price{font-size:21px;font-weight:bold;margin:15px}
+.card button{background:#111827;color:white;border:0;border-radius:6px;padding:12px 20px;cursor:pointer}
+.about{background:white;text-align:center}
+.about p{max-width:650px;margin:15px auto;color:#697386;line-height:1.7}
+footer{background:#111827;color:#d4dbea;text-align:center;padding:30px;font-size:14px}
+@media(max-width:600px){header{padding:18px 5%;flex-direction:column;gap:15px}.hero h1{font-size:36px}nav a{margin:0 9px}}
+</style>
+</head>
+<body>
 
-All finds
-Tech
-Gaming
-Home
-Sports
-🎧
-Tech
-Wireless headphones
-Replace this demo card with a real item, condition, photos and price.
+<header>
+<div class="logo">FINDA.</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+</nav>
+</header>
 
-Price: add yours
-DEMO ITEM
-🎮
-Gaming
-Game controller
-List only after testing buttons, sticks, charging and connectivity.
+<div class="hero" id="home">
+<h1>Great Finds. Better Prices.</h1>
+<p>Discover cool products without paying more than you should.</p>
+<button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">EXPLORE FINDA</button>
+</div>
 
-Price: add yours
-DEMO ITEM
-💡
-Home
-Desk lamp
-Describe the exact condition and include clear photos of the actual item.
+<section id="shop">
+<h2 class="section-title">Explore Our Finds</h2>
+<p class="subtitle">A few examples of what you can discover at FINDA.</p>
 
-Price: add yours
-DEMO ITEM
-🏀
-Sports
-Sports gear
-Add the brand, size, measurements and any wear or damage.
+<div class="filters">
+<button onclick="filterProducts('all')">All</button>
+<button onclick="filterProducts('tech')">Tech</button>
+<button onclick="filterProducts('gaming')">Gaming</button>
+<button onclick="filterProducts('home')">Home</button>
+<button onclick="filterProducts('sports')">Sports</button>
+</div>
 
-Price: add yours
-DEMO ITEM
-⌨️
-Tech
-Computer accessories
-Include model details and confirm everything works as described.
+<div class="products">
+<div class="card" data-category="tech">
+<div class="product-icon">🎧</div>
+<h3>Wireless Headphones</h3>
+<p>Everyday audio for music, videos, and more.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
 
-Price: add yours
-DEMO ITEM
-🧩
-Everyday
-Useful everyday finds
-Replace this with a real product you have permission to sell.
+<div class="card" data-category="gaming">
+<div class="product-icon">🎮</div>
+<h3>Gaming Accessories</h3>
+<p>Gear up your gaming setup.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
 
-Price: add yours
-DEMO ITEM
-Store setup note: These are sample product cards, not items currently for sale. Before publishing, replace each demo card with an item you actually own or are authorized to sell, real photos, an accurate price and a working purchase/listing link. This starter site does not take payments or process orders.
-WHY FINDA?
-A good find is worth sharing.
-FINDA is an independent resale shop built around discovering useful products at fair prices. We focus on clear descriptions, honest condition details and giving good items another life.
+<div class="card" data-category="home">
+<div class="product-icon">💡</div>
+<h3>Smart Home Gadgets</h3>
+<p>Useful finds to make everyday life easier.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
 
-Get in touch
-Found something you like?
-Add your parent-approved business contact or link to your marketplace listings here before publishing.
+<div class="card" data-category="sports">
+<div class="product-icon">🏀</div>
+<h3>Sports Equipment</h3>
+<p>Find gear for your next game or workout.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
 
-Browse finds ↑
-FINDA. Great finds. Better prices.
-Independent resale shop · © 2026 FINDA
+<div class="card" data-category="tech">
+<div class="product-icon">🔊</div>
+<h3>Portable Speakers</h3>
+<p>Take your favorite sounds anywhere.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
+
+<div class="card" data-category="home">
+<div class="product-icon">🏠</div>
+<h3>Everyday Essentials</h3>
+<p>Simple products that make a difference.</p>
+<div class="price">Coming soon</div>
+<button onclick="alert('Product coming soon!')">Coming Soon</button>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2 class="section-title">About FINDA.</h2>
+<p>FINDA is all about discovering great products, useful gadgets, and interesting finds. Our goal is simple: make finding your next favorite product easy.</p>
+</section>
+
+<footer>
+<div class="logo">FINDA.</div>
+<p style="margin-top:12px">Great Finds. Better Prices.</p>
+<p style="margin-top:10px">© 2026 FINDA. All rights reserved.</p>
+</footer>
+
+<script>
+function filterProducts(category){
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=(category==='all'||card.dataset.category===category)?'block':'none';
+});
+}
+</script>
+
+</body>
+</html>
